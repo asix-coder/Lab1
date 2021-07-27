@@ -17,8 +17,10 @@ namespace Lab1
             InitializeComponent();
         }
 
+        Random MyRandom = new Random();
         Greyhound[] greyhounds = new Greyhound[4];
         Guy[] guys = new Guy[3];
+
 
         private void joeRadioButton_CheckedChanged(object sender, EventArgs e)
         {

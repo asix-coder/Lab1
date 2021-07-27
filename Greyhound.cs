@@ -13,18 +13,25 @@ namespace Lab1
         public int RacetrackLength; // Jak długa jest trasa
         public PictureBox MyPictureBox = null; // Mój obiekt PictureBox
         public int Location = 0; // Moje położenie na torze wyścigowym
-        public Random MyRandom = 0; // Instancja klasy random
+        public Random MyRandom; // Instancja klasy random
 
         public bool Run()
         {
-            // Przesuń się losowo o 1, 2, 3 lub 4 punkty
-            // Zaktualizuj położenie PictureBox na formularzu
-            // Zwróć true, jeżeli wygrałem wyścig
+            int distance = MyRandom.Next(5); // Przesuń się losowo o 1, 2, 3 lub 4 punkty
+            Location += distance; // Zaktualizuj położenie PictureBox na formularzu
+            if (Location >= RacetrackLength) // Zwróć true, jeżeli wygrałem wyścig
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public void TakeStartingPosition()
         {
-            // Wyzeruj położenie i ustaw na linii startowej
+            StartingPosition = 0; // Wyzeruj położenie i ustaw na linii startowej
         }
     }
 }
