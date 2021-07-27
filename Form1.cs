@@ -16,5 +16,20 @@ namespace Lab1
         {
             InitializeComponent();
         }
+
+        private void joeRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bobRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void alRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

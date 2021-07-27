@@ -34,11 +34,18 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.minimumBetLabel = new System.Windows.Forms.Label();
+            this.joeRadioButton = new System.Windows.Forms.RadioButton();
+            this.bobRadioButton = new System.Windows.Forms.RadioButton();
+            this.alRadioButton = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -91,11 +98,80 @@
             this.pictureBox5.TabIndex = 4;
             this.pictureBox5.TabStop = false;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.alRadioButton);
+            this.groupBox1.Controls.Add(this.bobRadioButton);
+            this.groupBox1.Controls.Add(this.joeRadioButton);
+            this.groupBox1.Controls.Add(this.minimumBetLabel);
+            this.groupBox1.Location = new System.Drawing.Point(24, 234);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(598, 160);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Betting Parlor";
+            // 
+            // minimumBetLabel
+            // 
+            this.minimumBetLabel.AutoSize = true;
+            this.minimumBetLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.minimumBetLabel.Location = new System.Drawing.Point(10, 20);
+            this.minimumBetLabel.Name = "minimumBetLabel";
+            this.minimumBetLabel.Size = new System.Drawing.Size(124, 15);
+            this.minimumBetLabel.TabIndex = 0;
+            this.minimumBetLabel.Text = "minimumBetLabel";
+            // 
+            // joeRadioButton
+            // 
+            this.joeRadioButton.AutoSize = true;
+            this.joeRadioButton.Checked = true;
+            this.joeRadioButton.Location = new System.Drawing.Point(13, 50);
+            this.joeRadioButton.Name = "joeRadioButton";
+            this.joeRadioButton.Size = new System.Drawing.Size(98, 17);
+            this.joeRadioButton.TabIndex = 1;
+            this.joeRadioButton.TabStop = true;
+            this.joeRadioButton.Text = "joeRadioButton";
+            this.joeRadioButton.UseVisualStyleBackColor = true;
+            this.joeRadioButton.CheckedChanged += new System.EventHandler(this.joeRadioButton_CheckedChanged);
+            // 
+            // bobRadioButton
+            // 
+            this.bobRadioButton.AutoSize = true;
+            this.bobRadioButton.Location = new System.Drawing.Point(13, 73);
+            this.bobRadioButton.Name = "bobRadioButton";
+            this.bobRadioButton.Size = new System.Drawing.Size(102, 17);
+            this.bobRadioButton.TabIndex = 2;
+            this.bobRadioButton.Text = "bobRadioButton";
+            this.bobRadioButton.UseVisualStyleBackColor = true;
+            this.bobRadioButton.CheckedChanged += new System.EventHandler(this.bobRadioButton_CheckedChanged);
+            // 
+            // alRadioButton
+            // 
+            this.alRadioButton.AutoSize = true;
+            this.alRadioButton.Location = new System.Drawing.Point(13, 97);
+            this.alRadioButton.Name = "alRadioButton";
+            this.alRadioButton.Size = new System.Drawing.Size(92, 17);
+            this.alRadioButton.TabIndex = 3;
+            this.alRadioButton.Text = "alRadioButton";
+            this.alRadioButton.UseVisualStyleBackColor = true;
+            this.alRadioButton.CheckedChanged += new System.EventHandler(this.alRadioButton_CheckedChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 141);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(646, 406);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -111,6 +187,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -122,6 +200,12 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton alRadioButton;
+        private System.Windows.Forms.RadioButton bobRadioButton;
+        private System.Windows.Forms.RadioButton joeRadioButton;
+        private System.Windows.Forms.Label minimumBetLabel;
     }
 }
 
