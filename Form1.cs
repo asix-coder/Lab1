@@ -17,6 +17,9 @@ namespace Lab1
             InitializeComponent();
         }
 
+        Greyhound[] greyhounds = new Greyhound[4];
+        Guy[] guys = new Guy[3];
+
         private void joeRadioButton_CheckedChanged(object sender, EventArgs e)
         {
 
