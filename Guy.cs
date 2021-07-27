@@ -21,13 +21,26 @@ namespace Lab1
         {
             // Ustaw moje pole tekstowe na opis zakładu, a napis obok
             // pola wybru tak, aby pokazywał ilość pieniędzy ("Janek ma 43 zł")
+
+            MyLabel.Text = Name + "bets" + NumericUpDown1.Value + "bucks on dog number" + NumericUpDown2.Value;
+            MyRadioButton.Text = Name + "has" + Cash + "bucks";
+
+            
         }
 
-        public void ClearBet() { } // Wyczyść mój zakład, aby był równy zero
+        public void ClearBet() { MyBet = null; } // Wyczyść mój zakład, aby był równy zero
 
-        public void PlaceBet(int Amount, int DogToWin)
+        public bool PlaceBet(int Amount, int DogToWin)
         {
-            // Ustal nowy zakład i przechowaj go w polu MyBet
+            MyBet = new Bet() { Amount = Amount, Dog = DogToWin, Bettor = this }; // Ustal nowy zakład i przechowaj go w polu MyBet
+            if (Cash >= Amount)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
             // Zwróć true, jeżeli facet ma wystarczającą ilość pieniędzy, aby obstawić
         }
 
