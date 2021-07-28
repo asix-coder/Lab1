@@ -15,6 +15,7 @@ namespace Lab1
         public Form1()
         {
             InitializeComponent();
+            nameLabel.Text = "Joe";
         }
 
         Random Random = new Random();
@@ -24,17 +25,26 @@ namespace Lab1
 
         private void joeRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (joeRadioButton.Checked)
+            {
+                nameLabel.Text = "Joe";
+            }
         }
 
         private void bobRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (bobRadioButton.Checked)
+            {
+                nameLabel.Text = "Bob";
+            }
         }
 
         private void alRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (alRadioButton.Checked)
+            {
+                nameLabel.Text = "Al";
+            }
         }
 
         private void startButton_Click(object sender, EventArgs e)
