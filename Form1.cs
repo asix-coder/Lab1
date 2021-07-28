@@ -17,7 +17,7 @@ namespace Lab1
             InitializeComponent();
         }
 
-        Random Randomizer = new Random();
+        Random Random = new Random();
         Greyhound[] greyhounds = new Greyhound[4];
         
 
@@ -44,7 +44,7 @@ namespace Lab1
                 MyPictureBox = pictureBox1,
                 StartingPosition = pictureBox1.Left,
                 RacetrackLength = racetrackPictureBox.Width - pictureBox1.Width,
-                MyRandom = Randomizer
+                MyRandom = Random
             };
 
             greyhounds[1] = new Greyhound()
@@ -52,7 +52,7 @@ namespace Lab1
                 MyPictureBox = pictureBox2,
                 StartingPosition = pictureBox2.Left,
                 RacetrackLength = racetrackPictureBox.Width - pictureBox2.Width,
-                MyRandom = Randomizer
+                MyRandom = Random
             };
 
             greyhounds[2] = new Greyhound()
@@ -60,7 +60,7 @@ namespace Lab1
                 MyPictureBox = pictureBox3,
                 StartingPosition = pictureBox3.Left,
                 RacetrackLength = racetrackPictureBox.Width - pictureBox3.Width,
-                MyRandom = Randomizer
+                MyRandom = Random
             };
 
             greyhounds[3] = new Greyhound()
@@ -68,7 +68,7 @@ namespace Lab1
                 MyPictureBox = pictureBox4,
                 StartingPosition = pictureBox4.Left,
                 RacetrackLength = racetrackPictureBox.Width - pictureBox4.Width,
-                MyRandom = Randomizer
+                MyRandom = Random
             };
 
             timer1.Start();
