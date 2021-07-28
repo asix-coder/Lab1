@@ -9,6 +9,7 @@ namespace Lab1
 {
     public class Guy
     {
+        /*
         public string Name; // Imię faceta
         public Bet MyBet; // Instancja klasy Bet przechowująca dane o zakładzie
         public int Cash; // Jak dużo pieniędzy posiada
@@ -48,5 +49,6 @@ namespace Lab1
         {
             // Poproś o wypłatę zakładu i zaktualizuj etykiety
         }
+        */
     }
 }

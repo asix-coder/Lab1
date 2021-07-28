@@ -18,8 +18,9 @@ namespace Lab1
         public bool Run()
         {
             int distance = MyRandom.Next(5); // Przesuń się losowo o 1, 2, 3 lub 4 punkty
-            Location += distance; // Zaktualizuj położenie PictureBox na formularzu
-            if (Location >= RacetrackLength) // Zwróć true, jeżeli wygrałem wyścig
+            Location += distance;
+            MyPictureBox.Left += Location; // Zaktualizuj położenie PictureBox na formularzu
+            if (MyPictureBox.Left >= RacetrackLength) // Zwróć true, jeżeli wygrałem wyścig
             {
                 return true;
             }
@@ -31,7 +32,7 @@ namespace Lab1
 
         public void TakeStartingPosition()
         {
-            StartingPosition = 0; // Wyzeruj położenie i ustaw na linii startowej
+            Location = 0; // Wyzeruj położenie i ustaw na linii startowej
         }
     }
 }

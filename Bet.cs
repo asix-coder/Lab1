@@ -8,6 +8,7 @@ namespace Lab1
 {
     public class Bet
     {
+        /*
         public int Amount; // Ilośc postawionych pieniędzy
         public int Dog; // Numer psa, na którego postawiono
         public Guy Bettor; // Facet, który zawarł zakład
@@ -26,6 +27,6 @@ namespace Lab1
             // zwróć wartość postawioną. W przeciwnym razie zwróć wartość
             // postawioną ze znakiem minus
         }
-
+        */
     }
 }
