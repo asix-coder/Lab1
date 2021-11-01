@@ -9,46 +9,33 @@ namespace Lab1
 {
     public class Guy
     {
-        /*
         public string Name; // Imię faceta
         public Bet MyBet; // Instancja klasy Bet przechowująca dane o zakładzie
         public int Cash; // Jak dużo pieniędzy posiada
-        
+
         // Ostatnie dwa pola są kontrolkami GUI na formularzu
-        public RadioButton MyRadioButton; // Moje pole wyboru
+        public RadioButton MyRadioBytton; // Moje pole wyboru
         public Label MyLabel; // Moja etykieta
 
         public void UpdateLabels()
         {
             // Ustaw moje pole tekstowe na opis zakładu, a napis obok
-            // pola wybru tak, aby pokazywał ilość pieniędzy ("Janek ma 43 zł")
-
-            MyLabel.Text = Name + "bets" + NumericUpDown1.Value + "bucks on dog number" + NumericUpDown2.Value;
-            MyRadioButton.Text = Name + "has" + Cash + "bucks";
-
-            
+            // pola wuboru tak, aby pokqazywał ilość pieniędzy ("Janek ma 45 zł")
+            MyLabel.Text = Name + " has " + Cash + " backs";
         }
 
-        public void ClearBet() { MyBet = null; } // Wyczyść mój zakład, aby był równy zero
+        public void ClearBet() { } // Wyczyść mój zakład, aby był równy zero
 
         public bool PlaceBet(int Amount, int DogToWin)
         {
-            MyBet = new Bet() { Amount = Amount, Dog = DogToWin, Bettor = this }; // Ustal nowy zakład i przechowaj go w polu MyBet
-            if (Cash >= Amount)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            // Ustal nowy zakład i przchowaj go w polu MyBet
             // Zwróć true, jeżeli facet ma wystarczającą ilość pieniędzy, aby obstawić
+            return true;
         }
 
         public void Collect(int Winner)
         {
             // Poproś o wypłatę zakładu i zaktualizuj etykiety
         }
-        */
     }
 }
