@@ -41,9 +41,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.betsButton = new System.Windows.Forms.Button();
-            this.alBetLabel = new System.Windows.Forms.TextBox();
-            this.bobBetLabel = new System.Windows.Forms.TextBox();
-            this.joeBetLabel = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.alRadioButton = new System.Windows.Forms.RadioButton();
@@ -51,6 +48,9 @@
             this.joeRadioButton = new System.Windows.Forms.RadioButton();
             this.minimumBetLabel = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.joeBetLabel = new System.Windows.Forms.Label();
+            this.bobBetLabel = new System.Windows.Forms.Label();
+            this.alBetLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.racetrackPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -113,14 +113,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.alBetLabel);
+            this.groupBox1.Controls.Add(this.bobBetLabel);
+            this.groupBox1.Controls.Add(this.joeBetLabel);
             this.groupBox1.Controls.Add(this.startButton);
             this.groupBox1.Controls.Add(this.numericUpDown2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.numericUpDown1);
             this.groupBox1.Controls.Add(this.betsButton);
-            this.groupBox1.Controls.Add(this.alBetLabel);
-            this.groupBox1.Controls.Add(this.bobBetLabel);
-            this.groupBox1.Controls.Add(this.joeBetLabel);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.nameLabel);
             this.groupBox1.Controls.Add(this.alRadioButton);
@@ -179,6 +179,11 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(140, 134);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
             this.numericUpDown1.Minimum = new decimal(new int[] {
             5,
             0,
@@ -201,33 +206,7 @@
             this.betsButton.TabIndex = 9;
             this.betsButton.Text = "Bets";
             this.betsButton.UseVisualStyleBackColor = true;
-            // 
-            // alBetLabel
-            // 
-            this.alBetLabel.BackColor = System.Drawing.SystemColors.Control;
-            this.alBetLabel.Location = new System.Drawing.Point(192, 97);
-            this.alBetLabel.Name = "alBetLabel";
-            this.alBetLabel.Size = new System.Drawing.Size(196, 20);
-            this.alBetLabel.TabIndex = 8;
-            this.alBetLabel.Text = "alBetLabel";
-            // 
-            // bobBetLabel
-            // 
-            this.bobBetLabel.BackColor = System.Drawing.SystemColors.Control;
-            this.bobBetLabel.Location = new System.Drawing.Point(192, 72);
-            this.bobBetLabel.Name = "bobBetLabel";
-            this.bobBetLabel.Size = new System.Drawing.Size(196, 20);
-            this.bobBetLabel.TabIndex = 7;
-            this.bobBetLabel.Text = "bobBetLabel";
-            // 
-            // joeBetLabel
-            // 
-            this.joeBetLabel.BackColor = System.Drawing.SystemColors.Control;
-            this.joeBetLabel.Location = new System.Drawing.Point(192, 47);
-            this.joeBetLabel.Name = "joeBetLabel";
-            this.joeBetLabel.Size = new System.Drawing.Size(196, 20);
-            this.joeBetLabel.TabIndex = 6;
-            this.joeBetLabel.Text = "joeBetLabel";
+            this.betsButton.Click += new System.EventHandler(this.betsButton_Click);
             // 
             // label2
             // 
@@ -297,6 +276,33 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // joeBetLabel
+            // 
+            this.joeBetLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.joeBetLabel.Location = new System.Drawing.Point(192, 50);
+            this.joeBetLabel.Name = "joeBetLabel";
+            this.joeBetLabel.Size = new System.Drawing.Size(190, 17);
+            this.joeBetLabel.TabIndex = 14;
+            this.joeBetLabel.Text = "joeBetLabel";
+            // 
+            // bobBetLabel
+            // 
+            this.bobBetLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bobBetLabel.Location = new System.Drawing.Point(192, 75);
+            this.bobBetLabel.Name = "bobBetLabel";
+            this.bobBetLabel.Size = new System.Drawing.Size(190, 15);
+            this.bobBetLabel.TabIndex = 15;
+            this.bobBetLabel.Text = "bobBetLabel";
+            // 
+            // alBetLabel
+            // 
+            this.alBetLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.alBetLabel.Location = new System.Drawing.Point(192, 99);
+            this.alBetLabel.Name = "alBetLabel";
+            this.alBetLabel.Size = new System.Drawing.Size(190, 15);
+            this.alBetLabel.TabIndex = 16;
+            this.alBetLabel.Text = "alBetLabel";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -344,11 +350,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Button betsButton;
-        private System.Windows.Forms.TextBox alBetLabel;
-        private System.Windows.Forms.TextBox bobBetLabel;
-        private System.Windows.Forms.TextBox joeBetLabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label alBetLabel;
+        private System.Windows.Forms.Label bobBetLabel;
+        private System.Windows.Forms.Label joeBetLabel;
     }
 }
 

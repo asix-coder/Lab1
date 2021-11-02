@@ -24,7 +24,7 @@ namespace Lab1
             }
             else
             {
-                return Bettor.Name + "has not placed a bet";
+                return Bettor.Name + " has not placed a bet";
             }
         }
 

@@ -16,11 +16,48 @@ namespace Lab1
         {
             InitializeComponent();
             nameLabel.Text = "Joe";
+            minimumBetLabel.Text = "Minimum bet: " + numericUpDown1.Minimum + " bucks";
+
+           
+
+            guys[0] = new Guy()
+            {
+                 Name = "Joe",
+                 MyBet = null,
+                 Cash = 50,
+                 MyRadioButton = joeRadioButton,
+                 MyLabel = joeBetLabel
+            };
+
+            guys[1] = new Guy()
+            {
+                Name = "Bob",
+                MyBet = null,
+                Cash = 75,
+                MyRadioButton = bobRadioButton,
+                MyLabel = bobBetLabel
+            };
+
+            guys[2] = new Guy()
+            {
+                Name = "Al",
+                MyBet = null,
+                Cash = 45,
+                MyRadioButton = alRadioButton,
+                MyLabel = alBetLabel
+            };
+
+            for (int i = 0; i < 3; i++)
+            {
+                guys[i].ClearBet();
+                guys[i].UpdateLabels();
+            }
         }
 
         Random Random = new Random();
         Greyhound[] greyhounds = new Greyhound[4];
-        
+        Guy[] guys = new Guy[3];
+        int guyid;
 
 
         private void joeRadioButton_CheckedChanged(object sender, EventArgs e)
@@ -28,6 +65,7 @@ namespace Lab1
             if (joeRadioButton.Checked)
             {
                 nameLabel.Text = "Joe";
+                guyid = 0;
             }
         }
 
@@ -36,6 +74,7 @@ namespace Lab1
             if (bobRadioButton.Checked)
             {
                 nameLabel.Text = "Bob";
+                guyid = 1;
             }
         }
 
@@ -44,6 +83,7 @@ namespace Lab1
             if (alRadioButton.Checked)
             {
                 nameLabel.Text = "Al";
+                guyid = 2;
             }
         }
 
@@ -93,8 +133,24 @@ namespace Lab1
                 {
                     timer1.Stop();
                     MessageBox.Show("Dog #" + (i + 1) + " won the race!", "We have a winner!");
+                    for (int j = 0; j < 3; j++)
+                    {
+                        guys[j].Collect(i+1);
+                        guys[j].ClearBet();
+                    }
+                    for (int k = 0; k < 4; k++)
+                    {
+                        greyhounds[k].TakeStartingPosition();
+                    }
                 }
             }
+        }
+
+        private void betsButton_Click(object sender, EventArgs e)
+        {
+            guys[guyid].MyBet.Amount = Convert.ToInt32(numericUpDown1.Value);
+            guys[guyid].MyBet.Dog = Convert.ToInt32(numericUpDown2.Value);
+            guys[guyid].UpdateLabels();
         }
     }
 }

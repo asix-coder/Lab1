@@ -33,6 +33,7 @@ namespace Lab1
         public void TakeStartingPosition()
         {
             Location = 0; // Wyzeruj położenie i ustaw na linii startowej
+            MyPictureBox.Left = StartingPosition;
         }
     }
 }
